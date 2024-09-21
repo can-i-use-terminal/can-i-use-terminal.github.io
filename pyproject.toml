@@ -5,7 +5,9 @@ description = "Add your description here"
 authors = [
     { name = "hkalbasi", email = "hamidrezakalbasi@protonmail.com" }
 ]
-dependencies = []
+dependencies = [
+    "python-liquid>=1.12.1",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 

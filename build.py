@@ -12,6 +12,8 @@ from datetime import datetime
 
 date_offsets = {}
 
+last_added_pos = 0.
+
 for i in range(2000, 2100):
     now = time.time()
     target = datetime.fromisoformat(f"{i}-01-01").timestamp()
@@ -19,15 +21,18 @@ for i in range(2000, 2100):
         break
     diff = now - target
     pos = 0.9999 ** (diff / 30000)
-    date_offsets[i] = pos
+    if pos - last_added_pos > 0.07:
+        last_added_pos = pos
+        date_offsets[i] = pos * 50
 
 def generate_html():
-    with open('template.html', 'r') as file:
+    with open('template.liquid', 'r') as file:
         template = file.read()
     template = Template(template)
-    for x in imdb_result:
-        x['date'] = x['date'].split()[2]
-    html = template.render(data=imdb_result)
+    html = template.render(data={
+        "date_offsets_years": list(date_offsets.keys()),
+        "date_offsets": date_offsets,
+    })
     with open('dist/index.html', 'w') as file:
         file.write(html)
 
