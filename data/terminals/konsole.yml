@@ -1,0 +1,27 @@
+name: Konsole
+created_date: 2010-07-10
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://bugs.kde.org/show_bug.cgi?id=372116
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2024-07-24
+        release: v24.12
+        links:
+          - name: implementation PR
+            link: https://invent.kde.org/utilities/konsole/-/merge_requests/767
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://bugs.kde.org/show_bug.cgi?id=391781
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2022-02-01
+        release: v22.04
+        links:
+          - name: implementation PR
+            link: https://invent.kde.org/utilities/konsole/-/merge_requests/594

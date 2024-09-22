@@ -1,0 +1,46 @@
+terminals:
+  - alacritty
+  # - contour
+  # - far2l
+  # - foot
+  - gnome_terminal
+  # - hterm
+  # - iterm2
+  - kitty
+  - konsole
+  - mobaxterm
+  - qterminal
+  # - rxvt
+  - st
+  # - terminal.app
+  - tmux
+  # - urxvt
+  # - wezterm
+  - windows_terminal
+  - xterm_js
+  - xterm
+  - zellij
+
+features:
+  osc52copy:
+    title: OSC 52 set - copy to clipboard
+    description: This feature allow apps to set the clipboard content. A common usecase is to copy text from terminal editors.
+  sixel:
+    title: SIXEL graphics format
+    description: The SIXEL format allows the terminal to display bitmap graphics.
+status_cases:
+  supported:
+    name: Supported
+    color: "#0b6316"
+  opt_in:
+    name: Opt-in
+    color: "#fd0"
+  not_supported:
+    name: Not supported
+    color: "#86261a"
+  wont_do:
+    name: "Won't do"
+    color: "#56261a"
+  not_created:
+    name: Not created
+    color: "#555555"

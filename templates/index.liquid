@@ -1,0 +1,12 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <ul>
+    {% for f in data["features"] %}
+      <li><a href="/features/{{ f[0] }}.html">{{ f[1]["title"] }}</a></li>
+    {% endfor  %}
+    </ul>
+  </body>
+</html>

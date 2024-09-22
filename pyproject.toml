@@ -7,6 +7,7 @@ authors = [
 ]
 dependencies = [
     "python-liquid>=1.12.1",
+    "pyyaml>=6.0.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"

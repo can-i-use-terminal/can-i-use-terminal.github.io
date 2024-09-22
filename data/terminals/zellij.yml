@@ -1,0 +1,15 @@
+name: Zellij
+created_date: 2020-09-03
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://github.com/zellij-org/zellij/issues/1199
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2022-08-12
+        release: v0.31.2
+        links:
+          - name: implementation PR
+            link: https://github.com/zellij-org/zellij/pull/1644

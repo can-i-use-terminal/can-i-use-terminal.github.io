@@ -1,0 +1,14 @@
+name: xterm.js
+created_date: 2014-03-24
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://github.com/xtermjs/xterm.js/issues/3260
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2024-04-22
+        links:
+          - name: implementation PR
+            link: https://github.com/xtermjs/xterm.js/pull/4220

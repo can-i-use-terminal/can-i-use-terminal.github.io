@@ -16,6 +16,8 @@ python-dateutil==2.9.0.post0
     # via python-liquid
 python-liquid==1.12.1
     # via can-i-use-terminal-github-io
+pyyaml==6.0.2
+    # via can-i-use-terminal-github-io
 six==1.16.0
     # via python-dateutil
 typing-extensions==4.12.2

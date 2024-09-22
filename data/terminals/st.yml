@@ -1,0 +1,16 @@
+name: st
+created_date: 2008-05-11
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2017-03-18
+        links:
+          - name: Commit that adds support
+            link: https://git.suckless.org/st/commit/e7ed326d2e914a57017c9f34459824614075519b.html
+      - status: opt_in
+        date: 2020-05-30
+        links:
+          - name: Commit that disables by default
+            link: https://git.suckless.org/st/commit/a2a704492b9f4d2408d180f7aeeacf4c789a1d67.html

@@ -1,0 +1,9 @@
+name: MobaXterm
+created_date: 2008-04-16
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+  sixel:
+    events:
+      - status: not_supported

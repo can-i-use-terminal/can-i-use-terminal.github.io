@@ -1,0 +1,9 @@
+name: QTerminal
+created_date: 2012-02-21
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://gitlab.gnome.org/GNOME/vte/-/issues/2495
+    events:
+      - status: not_supported

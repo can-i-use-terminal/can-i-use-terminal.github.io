@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #252017;
+        color: #f2e8d5;
+      }
+      tr {
+        height: 3rem;
+      }
+      td {
+        text-align: center;
+      }
+
+      .has-tooltip span {
+          display:none; 
+          padding:2px 3px; 
+          margin-left:8px; 
+          width:230px;
+      }
+          
+      .has-tooltip:hover span{
+          display:inline; 
+          position:absolute; 
+          background:#ffffff; 
+          border:1px solid #cccccc; 
+          color:#6c6c6c;
+          z-index: 5;
+      }
+      {% for case in data["status_cases"] %}
+        .status-{{ case[0] }} {
+          background-color: {{ data["status_cases"][case[0]]["color"] }};
+        }
+      {% endfor %}
+    </style>
+  </head>
+  <body>
+    <h1>{{ data["feature"]["title"] }}</h1>
+    <p>{{ data["feature"]["description"] }}</p>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>
+          <div style="width: 70vw; position:relative;">
+            {% for year in data["date_offsets_years"] %}
+              <div style="position: absolute; display: inline; top: 0; left: {{ data["date_offsets"][year] }}vw;">
+                {{ year }}
+              </div>
+            {% endfor %}
+          </div>
+        </td>
+        <td>Current state</td>    
+      </tr>
+      {% for terminal in data["terminals"] %}
+        <tr>
+          <td>{{ data["terminal_data"][terminal]["name"] }}</td>
+          <td>
+            <div style="width: 71vw; position:relative;">
+            {% for segment in data["segments"][terminal] %}
+              <div class="has-tooltip status-{{ segment["name"] }}" style="display: inline; height: 2rem; text-align: center; width: {{ segment["len"] }}vw; left: {{ segment["pos"] }}vw; position:absolute;">
+                <div style="overflow: hidden;">
+                  {{ data["status_cases"][segment["name"]]["name"] }}
+                </div>
+                <span>
+                  {{ data["status_cases"][segment["name"]]["name"] }}  
+                  <ul>
+                    {% for l in segment["links"] %}
+                      <li><a href="{{ l["link"] }}"> {{ l["name"] }} </a></li>
+                    {% endfor %}
+                  </ul>
+                </span>
+              </div>
+            {% endfor %}
+            </div>
+          </td>
+          <td class="status-{{ data["current_status"][terminal]["status"] }}">{{ data["current_status"][terminal]["text"] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <p>
+      <a href="/">Return to home</a>
+    </p>
+    <script>
+      
+    </script>
+  </body>
+</html>

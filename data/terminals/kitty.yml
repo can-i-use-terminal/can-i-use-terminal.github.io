@@ -1,0 +1,23 @@
+name: Kitty
+created_date: 2016-10-16
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2022-09-08
+        release: v0.36.2
+        links:
+          - name: implementation commit
+            link: https://github.com/kovidgoyal/kitty/commit/d17a6cd3a325cd7fb063057e7cab2e365bb08738
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/kovidgoyal/kitty/issues/2511
+    events:
+      - status: not_supported
+      - status: wont_do
+        date: 2020-04-06
+        links:
+          - name: Comment by maintainer
+            link: https://github.com/kovidgoyal/kitty/issues/2511#issuecomment-609543803
