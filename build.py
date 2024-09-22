@@ -68,9 +68,9 @@ def current_status(events):
 
 date_offsets = {}
 
-last_added_pos = 0.
+last_added_pos = -100
 
-for i in range(2000, 2100):
+for i in range(1980, 2100):
     now = time.time()
     target = datetime.fromisoformat(f"{i}-01-01").timestamp()
     if target >= now:
