@@ -7,3 +7,9 @@ features:
       - status: supported
         date: 2017-05-09
         release: v2.5
+  sixel:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2023-08-22
+        release: v3.4
