@@ -14,3 +14,6 @@ features:
         links:
           - name: Commit that disables by default
             link: https://git.suckless.org/st/commit/a2a704492b9f4d2408d180f7aeeacf4c789a1d67.html
+  sixel:
+    events:
+      - status: not_supported

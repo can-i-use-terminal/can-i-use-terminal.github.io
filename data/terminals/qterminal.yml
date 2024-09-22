@@ -4,6 +4,12 @@ features:
   osc52copy:
     links:
       - name: Tracking issue
-        link: https://gitlab.gnome.org/GNOME/vte/-/issues/2495
+        link: https://github.com/lxqt/qtermwidget/issues/488
+    events:
+      - status: not_supported
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/lxqt/qtermwidget/issues/552
     events:
       - status: not_supported

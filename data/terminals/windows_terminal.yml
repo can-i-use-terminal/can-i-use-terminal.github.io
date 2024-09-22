@@ -13,3 +13,15 @@ features:
         links:
           - name: implementation PR
             link: https://github.com/microsoft/terminal/pull/5823
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/microsoft/terminal/issues/448
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2024-07-01
+        release: v1.22.2362.0
+        links:
+          - name: implementation PR
+            link: https://github.com/microsoft/terminal/pull/17421

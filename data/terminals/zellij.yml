@@ -13,3 +13,15 @@ features:
         links:
           - name: implementation PR
             link: https://github.com/zellij-org/zellij/pull/1644
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/zellij-org/zellij/issues/371
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2022-07-08
+        release: v0.31.0
+        links:
+          - name: implementation PR
+            link: https://github.com/zellij-org/zellij/pull/1557

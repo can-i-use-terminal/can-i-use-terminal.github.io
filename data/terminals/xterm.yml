@@ -6,3 +6,10 @@ features:
       - status: not_supported
       - status: opt_in
         date: 2013-09-10
+  sixel:
+    events:
+      - status: not_supported
+      - status: opt_in
+        date: 2013-07-05
+      - status: supported
+        date: 2020-08-17
