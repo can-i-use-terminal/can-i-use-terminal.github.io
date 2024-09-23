@@ -1,0 +1,17 @@
+name: iTerm2
+created_date: 2010-07-18
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2012-08-12
+        links:
+          - name: implementation PR
+            link: https://github.com/gnachman/iTerm2/pull/88
+  sixel:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2019-08-01
+        release: v3.3.0

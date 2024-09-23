@@ -1,0 +1,12 @@
+name: Terminal.app
+created_date: 2001-03-27
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+        links:
+          - name: Workaround
+            link: https://github.com/roy2220/osc52pty
+  sixel:
+    events:
+      - status: not_supported

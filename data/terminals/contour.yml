@@ -1,0 +1,19 @@
+name: Contour
+created_date: 2019-08-14
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2020-07-21
+        links:
+          - name: commit
+            link: https://github.com/contour-terminal/contour/commit/c497ad564da7bc73037a2e84302963710ce46271
+  sixel:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2020-08-18
+        links:
+          - name: commit
+            link: https://github.com/contour-terminal/contour/commit/49c8b15289710cda372447b596799cddcc49e701

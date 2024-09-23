@@ -1,21 +1,22 @@
 terminals:
   - alacritty
-  # - contour
-  # - far2l
-  # - foot
+  - contour
+  - far2l
+  - foot
   - gnome_terminal
   # - hterm
-  # - iterm2
+  - iterm2
   - kitty
   - konsole
   - mobaxterm
   - qterminal
   # - rxvt
   - st
-  # - terminal.app
+  - terminal_macos
   - tmux
   # - urxvt
-  # - wezterm
+  - vscode
+  - wezterm
   - windows_terminal
   - xterm_js
   - xterm
@@ -34,7 +35,7 @@ status_cases:
     color: "#0b6316"
   opt_in:
     name: Opt-in
-    color: "#fd0"
+    color: "#494518"
   not_supported:
     name: Not supported
     color: "#86261a"

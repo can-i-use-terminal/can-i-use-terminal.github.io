@@ -1,0 +1,25 @@
+name: VSCode Terminal
+created_date: 2015-04-29
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://github.com/microsoft/vscode/issues/193508
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2024-06-06
+        release: v1.93
+        links:
+          - name: implementation PR
+            link: https://github.com/microsoft/vscode/pull/214262
+  sixel:
+    events:
+      - status: not_supported
+      - status: opt_in
+        date: 2023-05-15
+        release: v1.80
+        description: Can be enabled by terminal.integrated.enableImages
+        links:
+          - name: implementation PR
+            link: https://github.com/microsoft/vscode/pull/182442

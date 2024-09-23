@@ -1,0 +1,22 @@
+name: wezterm
+created_date: 2017-12-10
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2018-03-01
+        links:
+          - name: commit
+            link: https://github.com/wez/wezterm/commit/7b7b7cff46c6d067811a655b1e326fde9805f27d
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/wez/wezterm/issues/217
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2020-06-11
+        links:
+          - name: commit
+            link: https://github.com/wez/wezterm/commit/a78954375d4e7cd76fb91a07eb8a8faae3f12287

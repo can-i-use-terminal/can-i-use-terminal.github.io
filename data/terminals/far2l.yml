@@ -1,0 +1,17 @@
+name: far2l
+created_date: 2016-08-11
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+      - status: opt_in
+        date: 2022-11-22
+        links:
+          - name: implementation PR
+            link: https://github.com/elfmz/far2l/pull/1421
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/elfmz/far2l/issues/601
+    events:
+      - status: not_supported

@@ -1,0 +1,15 @@
+name: Foot
+created_date: 2019-06-09
+features:
+  osc52copy:
+    events:
+      - status: supported
+  sixel:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2020-03-06
+        release: v1.2.0
+        links:
+          - name: Release page
+            link: https://codeberg.org/dnkl/foot/releases/tag/1.2.0
