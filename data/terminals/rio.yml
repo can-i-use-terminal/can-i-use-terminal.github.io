@@ -1,0 +1,28 @@
+name: Rio Terminal
+created_date: 2022-09-02
+description: Rio is a terminal built to run everywhere, as a native desktop applications by Rust or even in the browser powered by WebAssembly.
+links:
+  - name: Github repository
+    link: https://github.com/raphamorim/rio
+language: Rust
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://github.com/raphamorim/rio/issues/276
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2023-10-09
+        release: v0.0.23
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/raphamorim/rio/issues/38
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2024-09-02
+        links:
+          - name: implementation PR
+            link: https://github.com/raphamorim/rio/pull/625

@@ -4,7 +4,7 @@ description: Alacritty is a GPU-accelerated terminal emulator focused on perform
 links:
   - name: Wikipedia
     link: https://en.wikipedia.org/wiki/Alacritty
-  - name: Github mirror
+  - name: Github repository
     link: https://github.com/exg/rxvt-unicode
 language: Rust
 features:

@@ -1,0 +1,17 @@
+name: Elementary Terminal
+created_date: 2017-04-26
+description: Terminal emulator designed for elementary OS.
+links:
+  - name: Github repository
+    link: https://github.com/elementary/terminal
+language: Vala
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/elementary/terminal/issues/717
+    events:
+      - status: not_supported

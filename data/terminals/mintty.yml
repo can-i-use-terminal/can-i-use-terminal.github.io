@@ -1,0 +1,31 @@
+name: mintty
+created_date: 2015-06-04
+description: Mintty is the Cygwin Terminal, as well as the terminal emulator for MSYS.
+links:
+  - name: Website
+    link: http://mintty.github.io/
+  - name: Github repository
+    link: https://github.com/mintty/mintty/
+language: C
+features:
+  osc52copy:
+    links:
+      - name: Tracking issue
+        link: https://github.com/mintty/mintty/issues/258
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2016-09-14
+        release: v2.6.1
+        links:
+          - name: implementation PR
+            link: https://github.com/mintty/mintty/pull/586
+  sixel:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2016-09-06
+        release: v2.6.0
+        links:
+          - name: implementation PR
+            link: https://github.com/mintty/mintty/pull/581

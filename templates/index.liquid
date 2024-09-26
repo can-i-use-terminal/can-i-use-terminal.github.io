@@ -3,6 +3,11 @@
 
   </head>
   <body>
+    <h1>Can I use terminal</h1>
+    <p>
+      This site provides up-to-date terminal support tables of terminal standards and protocols for popular terminal emulators.
+    </p>
+    <h2>Features</h2>
     <ul>
     {% for f in data["features"] %}
       <li><a href="/features/{{ f[0] }}.html">{{ f[1]["title"] }}</a></li>

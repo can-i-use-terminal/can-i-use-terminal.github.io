@@ -1,6 +1,8 @@
 terminals:
   - alacritty
   - contour
+  - darktile
+  - elementary_terminal
   - far2l
   - foot
   - gnome_terminal
@@ -8,10 +10,13 @@ terminals:
   - iterm2
   - kitty
   - konsole
+  - mintty
   - mobaxterm
   - qterminal
+  - rio
   - st
   - terminal_macos
+  - termux
   - tmux
   - urxvt
   - vscode

@@ -1,0 +1,19 @@
+name: Termux
+created_date: 2015-02-25
+description: A terminal emulator application for Android OS extendible by variety of packages.
+links:
+  - name: Wikipedia
+    link: https://en.wikipedia.org/wiki/Termux
+  - name: Github repository
+    link: https://github.com/termux/termux-app
+language: Java
+features:
+  osc52copy:
+    events:
+      - status: not_supported
+  sixel:
+    links:
+      - name: Tracking issue
+        link: https://github.com/termux/termux-app/issues/142
+    events:
+      - status: not_supported
