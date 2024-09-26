@@ -1,5 +1,12 @@
 name: Alacritty
 created_date: 2016-02-21
+description: Alacritty is a GPU-accelerated terminal emulator focused on performance and simplicity.
+links:
+  - name: Wikipedia
+    link: https://en.wikipedia.org/wiki/Alacritty
+  - name: Github mirror
+    link: https://github.com/exg/rxvt-unicode
+language: Rust
 features:
   osc52copy:
     events:

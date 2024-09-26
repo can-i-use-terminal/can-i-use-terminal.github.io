@@ -4,17 +4,16 @@ terminals:
   - far2l
   - foot
   - gnome_terminal
-  # - hterm
+  - hterm
   - iterm2
   - kitty
   - konsole
   - mobaxterm
   - qterminal
-  # - rxvt
   - st
   - terminal_macos
   - tmux
-  # - urxvt
+  - urxvt
   - vscode
   - wezterm
   - windows_terminal
