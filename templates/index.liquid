@@ -10,11 +10,22 @@
       contains {{ data["stats"]["data_points"] }} data points about {{ data["stats"]["terminals"] }} terminals
       and {{ data["stats"]["features"] }} features.
     </p>
+    <p>
+      Inspired by <a href="https://caniuse.com/">caniuse.com</a> this site's goal is to help users choose a terminal emulator with
+      features that they need, and help terminal app developers see how widespread the feature they want to use in their app is
+      supported.
+    </p>
     <h2>Features</h2>
-    <ul>
     {% for f in data["features"] %}
-      <li><a href="/features/{{ f[0] }}.html">{{ f[1]["title"] }}</a></li>
+        <h3><a href="/features/{{ f[0] }}.html">{{ f[1]["title"] }}</a></h3>
+        {{ data["features"][f[0]]["description"] }}
+        <ul>
+          {% for s in data["features"][f[0]]["summary"] %}
+          {% if s[1] != 0 %}
+            <li>{{ data["status_cases"][s[0]]["name"] }}: {{ s[1] }} terminals</li>
+          {% endif %}
+          {% endfor %}
+        </ul>
     {% endfor  %}
-    </ul>
   </body>
 </html>

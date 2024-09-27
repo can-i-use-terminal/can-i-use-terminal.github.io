@@ -30,8 +30,8 @@ a:hover {
 .has-tooltip:hover span {
     display: inline;
     position: absolute;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    color: #6c6c6c;
+    background: #000000;
+    border: 1px solid #111111;
+    color: #ffffff;
     z-index: 5;
 }

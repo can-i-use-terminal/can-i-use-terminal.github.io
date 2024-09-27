@@ -23,7 +23,18 @@ for terminal in data["terminal_data"]:
         for event in f["events"]:
             if not "date" in event:            
                 event["date"] = t["created_date"]
-            print(event)
+
+for feature in data["features"]:
+    summary = {}
+    for s in data["status_cases"]:
+        summary[s] = 0
+    for terminal in data["terminals"]:
+        if feature not in data["terminal_data"][terminal]["features"]:
+            summary["no_data"] += 1
+        else:
+            summary[data["terminal_data"][terminal]["features"][feature]["events"][-1]["status"]] += 1
+    data["features"][feature]["summary"] = summary
+    print(summary)
 
 MAX_POS = 70
 
@@ -46,7 +57,6 @@ def event_segments(feature):
         result.append(current_event)
 
     for event in events:
-        print("fff", event)
         pos = datetime_to_pos(datetime.combine(event["date"], datetime.min.time()))
         close(pos)
         current_event = { "name": event["status"], "pos": pos }
@@ -109,7 +119,8 @@ def generate_html():
             "data_points": data_point_count(),
             "terminals": len(data["terminals"]),
             "features": len(data["features"])
-        }
+        },
+        "status_cases": data["status_cases"],
     })
     with open(f'dist/index.html', 'w') as file:
         file.write(html)

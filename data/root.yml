@@ -40,6 +40,19 @@ features:
   sixel:
     title: SIXEL graphics format
     description: The SIXEL format allows the terminal to display bitmap graphics.
+  osc0icon:
+    title: OSC 0 icon - change window icon
+  osc0title:
+    title: OSC 0 title - change window title
+  osc4:
+    title: OSC 2 - change color palette
+  osc8:
+    title: OSC 8 - hyperlink
+  osc9:
+    title: OSC 9 - desktop notification
+  osc22:
+    title: OSC 22 - set the mouse pointer
+
 status_cases:
   supported:
     name: Supported
@@ -56,3 +69,6 @@ status_cases:
   not_created:
     name: Not created
     color: "#555555"
+  no_data:
+    name: No data
+    color: "#333333"
