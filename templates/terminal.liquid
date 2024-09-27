@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>{{ data["terminal"]["name"] }} | Can I use terminal</title>
+    <link rel="stylesheet" href="/static/main.css">
+  </head>
+  <body>
+    <h1>{{ data["terminal"]["name"] }}</h1>
+    <p>
+      {{ data["terminal"]["description"] }}
+    </p>
+    <ul>
+    {% for l in data["terminal"]["links"] %}
+      <li><a href="{{ l["link"] }}">{{ l["name"] }}</a></li>
+    {% endfor  %}
+    </ul>
+    <p>
+      <a href="/">Return to home</a>
+    </p>
+  </body>
+</html>

@@ -1,32 +1,8 @@
 <html>
   <head>
+    <title>{{ data["feature"]["title"] }} | Can I use terminal</title>
+    <link rel="stylesheet" href="/static/main.css">
     <style>
-      body {
-        background-color: #252017;
-        color: #f2e8d5;
-      }
-      tr {
-        height: 3rem;
-      }
-      td {
-        text-align: center;
-      }
-
-      .has-tooltip span {
-          display:none; 
-          padding:2px 3px; 
-          margin-left:8px; 
-          width:230px;
-      }
-          
-      .has-tooltip:hover span{
-          display:inline; 
-          position:absolute; 
-          background:#ffffff; 
-          border:1px solid #cccccc; 
-          color:#6c6c6c;
-          z-index: 5;
-      }
       {% for case in data["status_cases"] %}
         .status-{{ case[0] }} {
           background-color: {{ data["status_cases"][case[0]]["color"] }};
@@ -53,7 +29,7 @@
       </tr>
       {% for terminal in data["terminals"] %}
         <tr>
-          <td>{{ data["terminal_data"][terminal]["name"] }}</td>
+          <td><a href="/terminals/{{ terminal }}.html">{{ data["terminal_data"][terminal]["name"] }}</a></td>
           <td>
             <div style="width: 71vw; position:relative;">
             {% for segment in data["segments"][terminal] %}
@@ -80,8 +56,5 @@
     <p>
       <a href="/">Return to home</a>
     </p>
-    <script>
-      
-    </script>
   </body>
 </html>

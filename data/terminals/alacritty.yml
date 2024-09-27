@@ -5,7 +5,7 @@ links:
   - name: Wikipedia
     link: https://en.wikipedia.org/wiki/Alacritty
   - name: Github repository
-    link: https://github.com/exg/rxvt-unicode
+    link: https://github.com/alacritty/alacritty
 language: Rust
 features:
   osc52copy:

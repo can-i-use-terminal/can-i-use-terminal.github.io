@@ -4,6 +4,7 @@ from liquid import Template
 import time
 from datetime import datetime
 import os
+import shutil
 
 with open('data/root.yml', 'r') as file:
     data = yaml.safe_load(file)
@@ -56,6 +57,13 @@ def event_segments(feature):
     close(MAX_POS)
     return result
 
+def data_point_count():
+    sum = 0
+    for t in data["terminal_data"].values():
+        for f in t["features"].values():
+            sum += len(f["events"])
+    return sum
+
 def current_status(events):
     e = events[-1]
     text = data["status_cases"][e["status"]]["name"]
@@ -87,13 +95,30 @@ def generate_html():
     with open('templates/index.liquid', 'r') as file:
         index_template = file.read()
     index_template = Template(index_template)
+    with open('templates/terminal.liquid', 'r') as file:
+        terminal_template = file.read()
+    terminal_template = Template(terminal_template)
+    
     os.makedirs("dist", exist_ok=True)
+    shutil.copytree('static', 'dist/static', dirs_exist_ok=True)
     os.makedirs("dist/features", exist_ok=True)
+    os.makedirs("dist/terminals", exist_ok=True)
     html = index_template.render(data={
         "features": data["features"],
+        "stats": {
+            "data_points": data_point_count(),
+            "terminals": len(data["terminals"]),
+            "features": len(data["features"])
+        }
     })
     with open(f'dist/index.html', 'w') as file:
         file.write(html)
+    for t in data["terminals"]:
+        html = terminal_template.render(data={
+            "terminal": data["terminal_data"][t],
+        })
+        with open(f'dist/terminals/{t}.html', 'w') as file:
+            file.write(html)
     for f in data["features"]:
         terminals = [t for t in data["terminals"] if f in data["terminal_data"][t]["features"]]
         html = feature_template.render(data={
