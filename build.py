@@ -121,11 +121,13 @@ def generate_html():
             file.write(html)
     for f in data["features"]:
         terminals = [t for t in data["terminals"] if f in data["terminal_data"][t]["features"]]
+        unsupported_terminals = [t for t in data["terminals"] if not f in data["terminal_data"][t]["features"]]
         html = feature_template.render(data={
             "feature": data["features"][f],
             "date_offsets_years": list(date_offsets.keys()),
             "date_offsets": date_offsets,
             "terminals": terminals,
+            "unsupported_terminals": unsupported_terminals,
             "terminal_data": data["terminal_data"],
             "segments": { t: event_segments(data["terminal_data"][t]["features"][f]) for t in terminals},
             "current_status": { t: current_status(data["terminal_data"][t]["features"][f]["events"]) for t in terminals},

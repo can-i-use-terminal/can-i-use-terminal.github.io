@@ -53,6 +53,15 @@
         </tr>
       {% endfor %}
     </table>
+    {% if data["unsupported_terminals"] != blank %}
+    <p>
+      No data is available for terminals
+      {% for terminal in data["unsupported_terminals"] %}
+        <a href="/terminals/{{ terminal }}.html">{{ data["terminal_data"][terminal]["name"] }}</a>,
+      {% endfor %}
+      if you have data about them <a href="https://github.com/can-i-use-terminal/can-i-use-terminal.github.io/tree/main/data">please contribute</a>.
+    </p>
+    {% endif %}
     <p>
       <a href="/">Return to home</a>
     </p>
