@@ -30,6 +30,13 @@ features:
   osc52copy:
     title: OSC 52 set - copy to clipboard
     description: This feature allow apps to set the clipboard content. A common usecase is to copy text from terminal editors.
+  osc52paste:
+    title: OSC 52 get - paste from clipboard
+    description: |
+      This feature allow apps to get the clipboard content. A common usecase is to paste text into terminal editors by
+      using editor's mechanisms. Since it is considered a security hole to allow apps to read the clipboard
+      and a trivial workaround exists (pasting with the terminal emulator itself) this feature is not enabled
+      by default in many terminals.
   sixel:
     title: SIXEL graphics format
     description: The SIXEL format allows the terminal to display bitmap graphics.

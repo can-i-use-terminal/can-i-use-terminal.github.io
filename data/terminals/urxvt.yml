@@ -9,6 +9,9 @@ features:
   osc52copy:
     events:
       - status: not_supported
+  osc52paste:
+    events:
+      - status: not_supported
   sixel:
     events:
       - status: not_supported

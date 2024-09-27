@@ -17,6 +17,20 @@ features:
         links:
           - name: implementation PR
             link: https://github.com/alacritty/alacritty/pull/970
+  osc52paste:
+    events:
+      - status: not_supported
+      - status: supported
+        date: 2018-01-02
+        release: v0.2.1
+        links:
+          - name: implementation PR
+            link: https://github.com/alacritty/alacritty/pull/970
+      - status: opt_in
+        date: 2023-07-22
+        links:
+          - name: config implementation PR
+            link: https://github.com/alacritty/alacritty/pull/7109
   sixel:
     links:
       - name: Tracking issue

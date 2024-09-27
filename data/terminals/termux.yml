@@ -11,6 +11,9 @@ features:
   osc52copy:
     events:
       - status: not_supported
+  osc52paste:
+    events:
+      - status: not_supported
   sixel:
     links:
       - name: Tracking issue

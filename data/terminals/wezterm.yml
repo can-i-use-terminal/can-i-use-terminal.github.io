@@ -9,6 +9,12 @@ features:
         links:
           - name: commit
             link: https://github.com/wez/wezterm/commit/7b7b7cff46c6d067811a655b1e326fde9805f27d
+  osc52paste:
+    links:
+      - name: Tracking issue
+        link: https://github.com/wez/wezterm/issues/2050
+    events:
+      - status: not_supported
   sixel:
     links:
       - name: Tracking issue

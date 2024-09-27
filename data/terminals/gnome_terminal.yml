@@ -7,6 +7,12 @@ features:
         link: https://gitlab.gnome.org/GNOME/vte/-/issues/2495
     events:
       - status: not_supported
+  osc52paste:
+    links:
+      - name: Tracking issue
+        link: https://gitlab.gnome.org/GNOME/vte/-/issues/2495
+    events:
+      - status: not_supported
   sixel:
     links:
       - name: Tracking issue

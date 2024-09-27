@@ -13,6 +13,9 @@ features:
         links:
           - name: implementation PR
             link: https://github.com/zellij-org/zellij/pull/1644
+  osc52paste:
+    events:
+      - status: not_supported
   sixel:
     links:
       - name: Tracking issue
