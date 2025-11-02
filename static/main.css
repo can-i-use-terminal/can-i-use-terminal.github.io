@@ -3,10 +3,6 @@ body {
     color: #f2e8d5;
 }
 
-tr {
-    height: 3rem;
-}
-
 td {
     text-align: center;
 }
@@ -20,18 +16,25 @@ a:hover {
     text-decoration: underline; 
 } 
 
-.has-tooltip span {
+.has-tooltip > .tooltip {
     display: none;
     padding: 2px 3px;
     margin-left: 8px;
     width: 230px;
 }
 
-.has-tooltip:hover span {
+.has-tooltip:hover > .tooltip {
     display: inline;
     position: absolute;
     background: #000000;
     border: 1px solid #111111;
     color: #ffffff;
     z-index: 5;
+}
+
+.status {
+    vertical-align: middle; /* Does not work */
+    white-space: nowrap;
+    display: inline-block;
+    padding: 1rem 0; /* But this works? */
 }
