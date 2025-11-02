@@ -16,40 +16,32 @@
     <table>
       <tr>
         <td>Name</td>
-        <td>
-          <div style="width: 70vw; position:relative;">
-            {% for year in data["date_offsets_years"] %}
-              <div style="position: absolute; display: inline; top: 0; left: {{ data["date_offsets"][year] }}vw;">
-                {{ year }}
-              </div>
-            {% endfor %}
-          </div>
-        </td>
+        {% for year in data["date_offsets_years"] %}
+          <td>{{ year }}</td>
+        {% endfor %}
         <td>Current state</td>    
       </tr>
       {% for terminal in data["terminals"] %}
         <tr>
           <td><a href="/terminals/{{ terminal }}.html">{{ data["terminal_data"][terminal]["name"] }}</a></td>
-          <td>
-            <div style="width: 71vw; position:relative;">
-            {% for segment in data["segments"][terminal] %}
-              <div class="has-tooltip status-{{ segment["name"] }}" style="display: inline; height: 2rem; text-align: center; width: {{ segment["len"] }}vw; left: {{ segment["pos"] }}vw; position:absolute;">
-                <div style="overflow: hidden;">
-                  {{ data["status_cases"][segment["name"]]["name"] }}
-                </div>
-                <span>
-                  {{ data["status_cases"][segment["name"]]["name"] }}  
-                  <ul>
-                    {% for l in segment["links"] %}
-                      <li><a href="{{ l["link"] }}"> {{ l["name"] }} </a></li>
-                    {% endfor %}
-                  </ul>
-                </span>
+          <td colspan="{{ data["date_offsets_years"] | size }}">
+          <!-- Have to do this to avoid whitespace gaps -->
+          {% for segment in data["segments"][terminal] %}<div class="has-tooltip status status-{{ segment["name"] }}" style="width: {{ segment["len"] }}vw;">
+              <span class="statuslabel">{{ data["status_cases"][segment["name"]]["name"] }}</span>
+              <div class="tooltip"><!-- Tooltip -->
+                {{ data["status_cases"][segment["name"]]["name"] }}  
+                <ul>
+                  {% for l in segment["links"] %}
+                    <li><a href="{{ l["link"] }}"> {{ l["name"] }} </a></li>
+                  {% endfor %}
+                </ul>
               </div>
-            {% endfor %}
-            </div>
+            </div>{% endfor %}
           </td>
-          <td class="status-{{ data["current_status"][terminal]["status"] }}">{{ data["current_status"][terminal]["text"] }}</td>
+          <!-- This extra div is evil but is required to get the borders to match -->
+          <td>
+            <div class="status status-{{ data["current_status"][terminal]["status"] }}" style="width: 100%">{{ data["current_status"][terminal]["text"] }}</div>
+          </td>
         </tr>
       {% endfor %}
     </table>
